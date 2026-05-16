@@ -1,0 +1,79 @@
+﻿{
+  "marketing_image": {
+    "meta": {
+      "spec_version": "1.0.0",
+      "title": "TechMeUP Logo",
+      "brand_name": "TechMeUP",
+      "usage_context": "app_favicon_and_header"
+    },
+    "subject": {
+      "type": "logo",
+      "name": "TechMeUP Logo Mark",
+      "description": "A circular badge-style logo combining an upward-pointing arrow with the brand name. The arrow rises through the center of a ring, symbolizing growth and upward progress in tech learning.",
+      "wordmark": {
+        "text": "TechMeUP",
+        "word_break": "TechMeUP (single line)",
+        "font_style": "bold sans-serif",
+        "letter_spacing": "tight",
+        "position": "below_symbol"
+      }
+    },
+    "props": {
+      "foreground": [
+        {
+          "type": "upward_arrow",
+          "position": "center",
+          "notes": "clean geometric arrow pointing straight up, emerging from or integrated with a circular ring. Arrow should feel dynamic and modern."
+        },
+        {
+          "type": "circular_ring",
+          "position": "around_arrow",
+          "notes": "a thick circular ring or badge outline, partially enclosing the arrow. The arrow tip should break through or extend above the ring."
+        }
+      ]
+    },
+    "environment": {
+      "surface": {
+        "material": "matte",
+        "color": "#0f0f14"
+      },
+      "background": {
+        "color": "#0f0f14",
+        "texture": "solid",
+        "effect": "clean_nothing"
+      },
+      "atmosphere": {
+        "mood": "modern, clean, tech-forward, empowering",
+        "keywords": ["minimal", "professional", "growth", "innovation"]
+      }
+    },
+    "camera": {
+      "angle": "front",
+      "framing": "extreme_close_up",
+      "notes": "flat 2D logo view, no perspective distortion"
+    },
+    "lighting": {
+      "key_light_direction": "front",
+      "key_light_intensity": "very_high",
+      "fill_light_direction": "none",
+      "rim_light": false,
+      "color_temperature": "neutral"
+    },
+    "brand": {
+      "logo_asset": "techmeup_logo.png",
+      "primary_colors": ["#6366f1", "#818cf8", "#4f46e5"],
+      "secondary_colors": ["#e4e4e7", "#18181b"],
+      "forbidden_changes": [
+        "do_not_change_brand_name",
+        "do_not_change_upward_arrow_motif",
+        "do_not_change_circular_design_element"
+      ]
+    },
+    "controls": {
+      "lock_subject_geometry": true,
+      "lock_logo_and_label": true,
+      "allow_background_variation": false,
+      "allow_prop_relayout": "none"
+    }
+  }
+}

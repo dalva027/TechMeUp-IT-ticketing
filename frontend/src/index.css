@@ -19,18 +19,16 @@ body {
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
 }
 
 a {
-  color: #6366f1;
+  color: #818cf8;
   text-decoration: none;
 }
 
 a:hover {
-  color: #818cf8;
+  color: #a5b4fc;
 }
 
 button {
@@ -80,6 +78,7 @@ textarea {
 
 .btn-primary:hover {
   background: #4f46e5;
+  color: white;
 }
 
 .btn-secondary {
@@ -154,3 +153,137 @@ textarea {
 .mt-4 { margin-top: 16px; }
 .mt-6 { margin-top: 24px; }
 .mb-4 { margin-bottom: 16px; }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #18181b;
+  border-right: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  z-index: 100;
+  transition: width 0.2s ease;
+  overflow: hidden;
+  width: 240px;
+}
+
+.sidebar--collapsed {
+  width: 72px;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar__toggle {
+  background: none;
+  border: none;
+  color: #71717a;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.sidebar__toggle:hover {
+  color: #e4e4e7;
+  background: #27272a;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  width: calc(100% - 16px);
+  position: relative;
+  cursor: pointer;
+  min-height: 40px;
+  overflow: hidden;
+}
+
+.sidebar__item:hover {
+  background: #27272a;
+}
+
+.sidebar__item--active {
+  background: #4f46e520;
+}
+
+.sidebar__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.sidebar__label {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  transition: color 0.15s ease;
+}
+
+.sidebar--collapsed .sidebar__label {
+  display: none;
+}
+
+.sidebar--collapsed .sidebar__nav {
+  padding: 0;
+  align-items: center;
+}
+
+.sidebar--collapsed .sidebar__item {
+  width: 100%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* App wrapper — padding-left pushes content past the fixed sidebar */
+.app-wrapper {
+  min-height: 100vh;
+  transition: padding-left 0.2s ease;
+}
+
+/* Navbar — centered within content area */
+.app-nav {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Content area — fills remaining width */
+.content-area {
+  min-height: calc(100vh - 80px);
+  padding: 0 32px;
+}
+
+/* Page card — max-width, starts at left edge of content area */
+.page-card {
+  max-width: 1120px;
+}

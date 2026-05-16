@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular ring badge -->
+  <circle cx="60" cy="60" r="48" fill="none" stroke="url(#ringGrad)" stroke-width="6"/>
+
+  <!-- Upward arrow inside the circle -->
+  <path d="M60 35 L80 60 L66 60 L66 90 L54 90 L54 60 L40 60 Z"
+        fill="url(#arrowGrad)" stroke="none"/>
+
+  <!-- TechMeUP wordmark -->
+  <text x="120" y="72" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="700" fill="#e4e4e7">
+    <tspan fill="#6366f1">Tech</tspan><tspan fill="#818cf8">Me</tspan><tspan fill="#4ade80">UP</tspan>
+  </text>
+</svg>

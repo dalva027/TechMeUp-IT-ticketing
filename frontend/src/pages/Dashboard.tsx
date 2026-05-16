@@ -61,7 +61,11 @@ export default function Dashboard() {
     <div>
       <div className="flex-between mb-4">
         <h2>Dashboard</h2>
-        <Link to="/tickets/new" className="btn-primary">+ New Ticket</Link>
+        <Link to="/tickets/new" >
+        <div style={{ display: "flex", padding: "10px 20px" }} className="card">
+          + New Ticket
+        </div> 
+        </Link>    
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 24 }}>
@@ -85,7 +89,7 @@ export default function Dashboard() {
 
       <div className="flex-between mb-4">
         <div style={{ display: "flex", gap: 8 }}>
-          {["", "OPEN", "IN_PROGRESS", "RESOLVED", "CLOSED"].map((f) => (
+          {["", "OPEN", "IN PROGRESS", "RESOLVED", "CLOSED"].map((f) => (
             <button
               key={f}
               className={filter === f ? "btn-primary" : "btn-secondary"}
